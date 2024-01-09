@@ -19,4 +19,3 @@ Route::post('/my-route', function (Request $req) {
 });
 
 ?>
-// php artisan serve
