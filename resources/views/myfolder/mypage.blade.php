@@ -7,13 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Playfair+Display:ital,wght@1,400;1,600&family=Rubik+Bubbles&family=Sriracha&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>หาสูตรคูณ</title>
 </head>
     <table>
         <tbody>
             <body>
                 <center>
-                    <h1>ใส่แม่สูตรคูณที่คุณต้องการ</h1>
+                    <h1>ใส่แม่สูตรคูณที่ต้องการ</h1>
 
                     <form method="post" action="/my-route">
                         @csrf
