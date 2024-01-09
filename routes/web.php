@@ -13,10 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/my-route' , function(){
     // return view('myroute');
     $data = ['val_a' => 'Hello World'];
