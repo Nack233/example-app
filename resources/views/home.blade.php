@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <form action="/submit" method="post" class="card bg-image" style="background-image: url('');">
+        <form action="/submit" method="post" class="card bg-image" style="background-image: url('https://images.unsplash.com/photo-1540550935-83d398635160?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDdsfQ');">
           <div class="card-header">
             <h3>ข้อมูลส่วนตัว</h3>
           </div>
@@ -61,6 +61,14 @@
                 <option value="blue">สีน้ำเงิน</option>
                 <option value="green">สีเขียว</option>
               </select>
+            </div>
+            <div class="form-group">
+                <label for="favorite-music">แนวเพลงที่ชอบ</label>
+                <select class="form-control bg-light" id="favorite-music" name="favorite-music">
+                  <option value="rock">ร็อค</option>
+                  <option value="pop">ป็อป</option>
+                  <option value="jazz">แจ๊ส</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="agree">ยินยอมให้เก็บข้อมูล</label>
