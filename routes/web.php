@@ -1,7 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MyController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +15,7 @@ use Illuminate\Http\Request;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::get('/my-controller', [MyController::class , 'index']);
 Route::get('/my-route' , function(){
     // return view('myroute');
     $data = ['val_a' => 'Hello World'];
