@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\C_titles;
 use App\Http\Controllers\MyController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -15,14 +16,36 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/my-controller', [MyController::class , 'index']);
-Route::get('/my-route' , function(){
+
+Route::resource('titles', C_titles::class);
+
+Route::get('/my-controller', [MyController::class, 'index']);
+
+Route::get('/my-controller2', 'App\Http\Controllers\MyController@index');
+Route::namespace('App\Http\Controllers')->group(function(){
+    Route::get('/my-controller3', 'MyController@index');
+    Route::post('/my-controller3-post', 'MyController@store');
+});
+
+Route::resource('/my-controller4', MyController::class);
+
+
+Route::get('/', function () {
+    return view('welcome'); // welcome.blade.php
+});
+
+// use Illuminate\Http\Request;
+
+Route::get('/my-route', function(){
     // return view('myroute');
-    $data = ['val_a' => 'Hello World'];
+    //        Key    =>  Value
+    $data = ['val_a' => 'Hello World!'];
+    $data['val_b'] = "Laravel";
     return view('myfolder.mypage',$data);
 });
 
-Route::post('/my-route' , function(Request $req){
-    $data['myinput'] = $req->input('myinput');
-    return view('myroute' , $data);
+
+Route::post('/my-route', function(Request $req){
+    $data['myinput'] =  $req->input('myinput');
+    return view('myroute', $data);
 });
