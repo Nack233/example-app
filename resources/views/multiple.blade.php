@@ -2,17 +2,18 @@
 <html>
 
 <head>
-    <title>Multiplication Table</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Multiplication Table Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.6.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <h1>โปรแกรมรับค่าตัวเลขและสร้างเป็นตารางสูตรคูณ</h1>
+    <h1>Multiplication Table Calculator</h1>
     <div class="form-group">
-        <label for="inputNumber">ใส่เลขที่ต้องการ:</label>
-        <input type="number" id="inputNumber" min="1" required>
+        <label for="inputNumber">Enter a number:</label>
+        <input type="number" id="inputNumber" class="form-control" min="1" required>
     </div>
-    <button id="generateTableBtn">Generate Table</button>
+    <button id="generateTableBtn" class="btn btn-primary">Generate Table</button>
     <div id="multiplicationTable"></div>
 
     <script>
@@ -22,7 +23,7 @@
 
                 // Validate input
                 if (isNaN(inputNumber) || inputNumber < 1) {
-                    alert("กรุณาใส่เลขดีๆได้มั้ยมันใส่ลบไม่ได้นะจ้ะว่างไว้ก็ไม่ได้ขอร้อง!!!!.");
+                    alert("Please enter a valid positive number.");
                     return;
                 }
 
@@ -35,16 +36,16 @@
                 const tableBody = $("<tbody>");
 
                 // Create table header
-                tableHead.append($("<tr>").append($("<th>", { text: "#" }), $("<th>", { text: "ผลลัพธ์" })));
+                tableHead.append($("<tr>").append($("<th>", { text: "#" }), $("<th>", { text: "Result" })));
 
                 // Generate table rows
-                for (let i = inputNumber; i <= inputNumber; i++) {
+                for (let i = 1; i <= inputNumber; i++) {
                     const tableRow = $("<tr>");
-                    const numberTd = $("<td>");
+                    const numberTd = $("<td>", { text: i });
                     const productTd = $("<td>");
 
                     // Calculate and display product
-                    for (let j = 1; j <= 12; j++) {
+                    for (let j = 1; j <= inputNumber; j++) {
                         const product = i * j;
                         productTd.append($("<span>", { class: "product", text: `${i} x ${j} = ${product}` }))
                             .append("<br>");
