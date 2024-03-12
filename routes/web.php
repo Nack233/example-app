@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/my-love', [MyController::class, 'love']);
 //auth
+Route::get('/', [MyAuth::class, 'login_view'])->name('login');
 Route::get('/login', [MyAuth::class, 'login_view'])->name('login');
 Route::get('/register', [MyAuth::class, 'register_view']);
 Route::get('/logout', [MyAuth::class, 'logout_process'])->name('logout');
@@ -41,9 +42,9 @@ Route::namespace('App\Http\Controllers')->group(function(){
 Route::resource('/my-controller4', MyController::class);
 
 
-Route::get('/', function () {
-    return view('welcome'); // welcome.blade.php
-});
+// Route::get('/', function () {
+//     return view('welcome'); // welcome.blade.php
+// });
 
 // use Illuminate\Http\Request;
 

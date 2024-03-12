@@ -228,8 +228,8 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href=# class="nav-link">
-                                <i class="fa-solid fa-calculator"></i>
+                            <a href="/my-love" class="nav-link">
+                                <i class="fas fa-barcode"></i>
                                 <p>
                                     Multiply for now
                                 </p>
