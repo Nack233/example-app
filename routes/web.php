@@ -18,9 +18,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/multi', function () {
-    return view('multiple');
-});
+Route::get('/my-love', [MyController::class, 'love']);
 //auth
 Route::get('/login', [MyAuth::class, 'login_view'])->name('login');
 Route::get('/register', [MyAuth::class, 'register_view']);

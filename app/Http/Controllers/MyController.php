@@ -15,6 +15,9 @@ class MyController extends Controller
     public function index(){
         return view('home');
     }
+    public function love(){
+        return view('multiple');
+    }
 
     public function store(Request $req){
         $data['myinput'] = $req->input('myinput');
