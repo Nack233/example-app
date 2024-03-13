@@ -18,6 +18,10 @@ class MyController extends Controller
     public function love(){
         return view('multiple');
     }
+    public function firstP(){
+        return view('welcome');
+    }
+
 
     public function store(Request $req){
         $data['myinput'] = $req->input('myinput');

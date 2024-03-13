@@ -17,10 +17,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::get('/', [MyController::class, 'firstP']);
 Route::get('/my-love', [MyController::class, 'love']);
 //auth
-Route::get('/', [MyAuth::class, 'login_view'])->name('login');
 Route::get('/login', [MyAuth::class, 'login_view'])->name('login');
 Route::get('/register', [MyAuth::class, 'register_view']);
 Route::get('/logout', [MyAuth::class, 'logout_process'])->name('logout');
